@@ -14,42 +14,48 @@
     <header class="header">
       <nav class="nav">
         <h1 class="logo">Astik Singh</h1>
+        <!-- Hamburger icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+          ☰
+        </div>
+
         <ul class="nav-links">
           <li><a href="#home" onclick="instantScrollToTop(event)">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="./resume/Resume_Professional_Template___Software_Engineer.pdf" target="_blank">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <section class="hero full-section" id="home">
-    <div class="hero-container">
-        <div class="hero-image">
-        <img src="./profile-pic.png" alt="Astik Singh" />
-        </div>
-        <div class="content">
-        <h2>Hello, I'm Astik Singh</h2>
-        <p>Full Stack Developer | Python |  Odoo Web Library (React/ Vue.js) | Node.js | Typescript | Docker</p>
-        </div>
-    </div>
+      <div class="hero-container">
+          <div class="hero-image">
+          <img src="./profile-pic.png" alt="Astik Singh" />
+          </div>
+          <div class="content">
+          <h2>Hello, I'm Astik Singh</h2>
+          <p>Full Stack Developer | Python |  Odoo Web Library (React/ Vue.js) | Node.js | Typescript | Docker</p>
+          </div>
+      </div>
     </section>
 
     <section class="about-me full-section" id="about">
         <h2 class="section-title">About Me</h2>
         <p class="about-text">
-            A software developer who thrives on turning coffee into clean code ☕💻.<br/>
-            I love learning new technologies, solving real-world problems, and building things from scratch (because templates are boring, right? 😎).
+          I’m a software developer who enjoys turning complex problems into clean, efficient code.
+          I’m passionate about learning new technologies, solving real-world challenges, and building systems from the ground up.
         </p>
         <p class="about-text">
-            Whether it's diving into backend logic, exploring system design, or figuring out how stuff works under the hood — I’m all in.  
-            I'm also big on communication, I believe that a good conversation can debug half the issues (and make the rest bearable).
+          My interests span across backend development, system design, and understanding how things work beneath the surface.
+          I also value clear communication — in my experience, a good conversation can resolve half the problems and make the rest easier to tackle.
         </p>
         <p class="about-text">
-            Outside work, you might find me strumming my guitar, hitting the gym, or dreaming about my next travel destination 🏋🎸🌍.  
-            I'm curious by nature, a maker at heart, and always up for a new challenge.
+          Outside of work, I enjoy staying active at the gym and exploring new travel destinations. I’m naturally curious, driven to build,
+          and always ready to take on new challenges.
         </p>
     </section>
 
@@ -78,7 +84,7 @@
         <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
-            <h3>Full Stack Developer</h3>
+            <h3>Full Stack Developer - 2.7 years</h3>
             <span class="timeline-date">Jan 2023 – Present</span>
             <p>Managed workflows across core Odoo apps like <a href="https://www.odoo.com/app/documents">Documents</a>, <a href="https://www.odoo.com/app/elearning">eLearning</a>, <a href="https://www.odoo.com/app/sales">Sales</a>, and <a href="https://www.odoo.com/app/website">Website</a>. Ensured smooth integration between frontend, backend, and DB layers.</p>
             <ul>
@@ -121,5 +127,10 @@
     <footer>
       <p>&copy; 2025 Astik Singh. All rights reserved.</p>
     </footer>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
   </body>
 </html>

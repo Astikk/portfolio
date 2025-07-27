@@ -39,6 +39,22 @@ body {
   font-size: 1.5rem;
 }
 
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ffffff; /* Underline color */
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -48,15 +64,13 @@ body {
 }
 
 .nav-links a {
+  color: #fff;
+  position: relative;
   text-decoration: none;
-  color: white;
-  font-weight: 300;
-  transition: color 0.3s;
+  padding: 5px 0;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #00bcd4;
-}
 
 @media (min-width: 768px) {
   .section-title {
@@ -67,6 +81,7 @@ body {
 
 /* Full-height sections */
 .full-section {
+  padding: 0 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -90,8 +105,8 @@ body {
 }
 
 .hero-image img {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #00bcd4;
@@ -354,8 +369,137 @@ body {
   }
 }
 
+footer p{
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #222;
+}
+
 @media (min-width: 1024px) {
+  .hero h2 {
+    font-size: 2.8rem; /* adjust as needed */
+  }
+
+  .hero p {
+    font-size: 1.8rem; /* adjust as needed */
+  }
+
   .project-cards {
     width: 20%;
   }
+  .timeline-date{
+    font-size: 1.2rem;
+  }
+  #experience {
+    font-size: 25px; /* or 20px, adjust as needed */
+  }
+
+  #experience h3 {
+    font-size: 25px;
+  }
+
+  #experience p,
+  #experience li {
+    font-size: 20px;
+  }
+
+  .about-me .about-text {
+  font-size: 1.4rem; /* or try 1.3rem, adjust as needed */
+  line-height: 1.2;
+}
+
+.about-me .section-title {
+  font-size: 1rem; /* to make "About Me" heading bigger */
+}
+.full-section .section-title{
+  font-size: 2rem;
+}
+}
+
+/* Handling hamburger menu for mobile view */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  .hero-image img {
+    width: 320px;
+    height: 320px;
+  }
+  .header {
+    height: 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  flex-direction: row;
+}
+
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #111; /* adjust to your theme */
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #111;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
 }
