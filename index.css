@@ -368,6 +368,7 @@ body {
   }
 
   .project-cards {
+    display: block;
     grid-template-columns: 1fr;
   }
 
