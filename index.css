@@ -136,15 +136,9 @@ body {
   padding: 60px 20px;
 }
 
-/* .project-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-} */
-
 .project-cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin-top: 30px;
 }
@@ -158,7 +152,7 @@ body {
 }
 
 .card {
-  width: 20%;
+  width: 19%;
   border: 2px solid transparent;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
@@ -550,4 +544,79 @@ footer {
   font-size: 14px;
   font-weight: 500;
   text-align: center;
+}
+
+
+/* adding skills css */
+
+/* Skills Section */
+.skills {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skills-group {
+  margin-bottom: 2.5rem;
+}
+
+.skills-group-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #a4a4a4;
+  border-left: 4px solid #3b82f6; /* subtle accent */
+  padding-left: 0.75rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+/* Contact section  */
+
+.contact-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.contact-card {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: 14px;
+  background: #111;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.status {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4ade80;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #e5e7eb;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #1f2933;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.contact-links a:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
 }
